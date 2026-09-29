@@ -5,354 +5,119 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Pharma PayGuard AI – Autonomous Compliance Intelligence</title>
 <style>
-/* ── RESET & BASE ── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{
-  font-family:"Segoe UI",-apple-system,system-ui,sans-serif;
-  font-size:13px;line-height:1.65;
-  color:#1a1f2e;
-  background:#eef1f6;
-  -webkit-font-smoothing:antialiased;
-}
+body{font-family:"Segoe UI",-apple-system,system-ui,sans-serif;font-size:13px;line-height:1.65;color:#1a1f2e;background:#eef1f6;-webkit-font-smoothing:antialiased;}
 
-/* ── GLOBAL HEADER ── */
-.g-header{
-  background:linear-gradient(135deg,#001a40 0%,#003870 55%,#005fad 100%);
-  color:#fff;
-  padding:0;
-  box-shadow:0 4px 24px rgba(0,40,100,.35);
-  position:sticky;top:0;z-index:200;
-}
-.g-inner{
-  max-width:1320px;margin:0 auto;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 32px;height:62px;
-}
+/* HEADER */
+.g-header{background:linear-gradient(135deg,#001a40 0%,#003870 55%,#005fad 100%);color:#fff;box-shadow:0 4px 24px rgba(0,40,100,.35);position:sticky;top:0;z-index:200;}
+.g-inner{max-width:1320px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:62px;}
 .brand{display:flex;align-items:center;gap:14px;}
-.brand-icon{
-  width:38px;height:38px;border-radius:9px;
-  background:linear-gradient(135deg,#0070D2,#00a3e0);
-  display:flex;align-items:center;justify-content:center;
-  font-size:14px;font-weight:900;color:#fff;letter-spacing:-1px;
-  box-shadow:0 2px 10px rgba(0,112,210,.45);flex-shrink:0;
-}
-.brand-name{font-size:16px;font-weight:800;letter-spacing:.1px;}
+.brand-icon{width:38px;height:38px;border-radius:9px;background:linear-gradient(135deg,#0070D2,#00a3e0);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;color:#fff;letter-spacing:-1px;box-shadow:0 2px 10px rgba(0,112,210,.45);flex-shrink:0;}
+.brand-name{font-size:16px;font-weight:800;}
 .brand-sub{font-size:10px;opacity:.72;letter-spacing:1.1px;text-transform:uppercase;margin-top:1px;}
 .h-right{display:flex;align-items:center;gap:22px;}
 .h-meta{font-size:11px;opacity:.65;text-align:right;line-height:1.6;}
-.h-badge{
-  background:rgba(255,255,255,.12);
-  border:1px solid rgba(255,255,255,.22);
-  border-radius:20px;padding:5px 14px;
-  font-size:10.5px;font-weight:700;letter-spacing:.6px;
-  color:rgba(255,255,255,.9);
-  display:flex;align-items:center;gap:6px;
-}
-.h-badge-dot{
-  width:7px;height:7px;border-radius:50%;
-  background:#4ade80;
-  box-shadow:0 0 6px #4ade80;
-  animation:pulse 2s infinite;
-}
+.h-badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:20px;padding:5px 14px;font-size:10.5px;font-weight:700;letter-spacing:.6px;color:rgba(255,255,255,.9);display:flex;align-items:center;gap:6px;}
+.h-badge-dot{width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 6px #4ade80;animation:pulse 2s infinite;}
 @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
 
-/* ── SCREEN DIVIDER ── */
-.screen-divider{
-  height:1px;
-  background:linear-gradient(90deg,transparent,#003870 25%,#0070D2 50%,#003870 75%,transparent);
-  margin:0 0 36px 0;
-}
-
-/* ── PAGE WRAPPER ── */
+/* PAGE */
 .page{max-width:1320px;margin:0 auto;padding:28px 28px 8px;}
+.screen-block{margin-bottom:44px;}
+.screen-divider{height:1px;background:linear-gradient(90deg,transparent,#003870 25%,#0070D2 50%,#003870 75%,transparent);margin:0 0 40px;}
 
-/* ── SCREEN BLOCK ── */
-.screen-block{margin-bottom:40px;}
-
-/* ── SCREEN HEADER ── */
-.scr-head{
-  background:linear-gradient(135deg,#001e4a 0%,#003870 60%,#004e96 100%);
-  border-radius:14px;
-  padding:24px 30px;
-  margin-bottom:20px;
-  display:flex;align-items:flex-start;justify-content:space-between;gap:18px;
-  box-shadow:0 6px 28px rgba(0,40,100,.22);
-  border:1px solid rgba(255,255,255,.08);
-}
-.scr-title-col{}
-.scr-tag{
-  display:inline-flex;align-items:center;gap:6px;
-  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);
-  border-radius:20px;padding:3px 12px;
-  font-size:10px;font-weight:700;letter-spacing:.9px;text-transform:uppercase;
-  color:rgba(255,255,255,.85);margin-bottom:9px;
-}
+/* SCREEN HEADER */
+.scr-head{background:linear-gradient(135deg,#001e4a 0%,#003870 60%,#004e96 100%);border-radius:14px;padding:22px 28px;margin-bottom:18px;display:flex;align-items:flex-start;justify-content:space-between;gap:18px;box-shadow:0 6px 28px rgba(0,40,100,.22);border:1px solid rgba(255,255,255,.08);}
+.scr-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:3px 12px;font-size:10px;font-weight:700;letter-spacing:.9px;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:8px;}
 .scr-title{font-size:20px;font-weight:800;color:#fff;line-height:1.28;letter-spacing:-.2px;}
-.scr-sub{font-size:11.5px;color:rgba(255,255,255,.58);margin-top:6px;line-height:1.6;}
+.scr-sub{font-size:11.5px;color:rgba(255,255,255,.58);margin-top:5px;}
 .scr-badges{display:flex;flex-direction:column;align-items:flex-end;gap:7px;flex-shrink:0;}
-.badge{
-  display:inline-flex;align-items:center;gap:6px;
-  padding:5px 13px;border-radius:20px;
-  font-size:10.5px;font-weight:700;letter-spacing:.3px;
-}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:5px 13px;border-radius:20px;font-size:10.5px;font-weight:700;}
 .b-risk{background:rgba(220,38,38,.18);color:#fca5a5;border:1px solid rgba(220,38,38,.35);}
 .b-act{background:rgba(22,163,74,.18);color:#86efac;border:1px solid rgba(22,163,74,.35);}
 .b-blue{background:rgba(255,255,255,.1);color:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.2);}
 .bdot{width:7px;height:7px;border-radius:50%;}
-.b-risk .bdot{background:#fca5a5;}
-.b-act .bdot{background:#86efac;}
+.b-risk .bdot{background:#fca5a5;} .b-act .bdot{background:#86efac;}
 
-/* ── KPI ROW ── */
-.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:18px;}
-.kpi{
-  background:#fff;
-  border:1px solid #e2e6ee;
-  border-radius:12px;
-  padding:18px 18px 14px;
-  text-align:center;
-  box-shadow:0 2px 10px rgba(0,0,0,.05);
-  position:relative;overflow:hidden;
-}
-.kpi::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:3px;
-  background:linear-gradient(90deg,#0070D2,#00a3e0);
-}
-.kpi.red::before{background:linear-gradient(90deg,#DC2626,#ef4444);}
-.kpi.amber::before{background:linear-gradient(90deg,#b45309,#f59e0b);}
-.kpi.green::before{background:linear-gradient(90deg,#16A34A,#22c55e);}
-.kpi-v{font-size:26px;font-weight:900;line-height:1.1;margin-bottom:4px;letter-spacing:-.7px;}
-.kpi-l{font-size:11px;color:#6b7280;font-weight:500;line-height:1.45;}
-.kpi-c{font-size:10.5px;font-weight:700;margin-top:6px;padding:2px 8px;border-radius:5px;display:inline-block;}
-.cu{background:#fef2f2;color:#DC2626;}
-.cw{background:#fffbeb;color:#b45309;}
-.cok{background:#f0fdf4;color:#16A34A;}
-.cb{background:#eff6ff;color:#2563eb;}
-.vr{color:#DC2626;} .va{color:#b45309;} .vg{color:#16A34A;} .vb{color:#2563eb;}
-
-/* ── SECTION LABEL ── */
-.sec-lbl{
-  font-size:10.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;
-  color:#374151;margin-bottom:13px;
-  display:flex;align-items:center;gap:9px;
-}
-.sec-lbl::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,#d1d5db,transparent);}
-
-/* ── GRIDS ── */
+/* GRIDS */
 .g2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:16px;}
 .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:16px;}
-.g12{display:grid;grid-template-columns:1fr 2fr;gap:16px;margin-bottom:16px;}
 .gfull{margin-bottom:16px;}
 
-/* ── CARD ── */
-.card{
-  background:#fff;
-  border:1px solid #e2e6ee;
-  border-radius:12px;
-  padding:18px 20px;
-  box-shadow:0 2px 10px rgba(0,0,0,.045);
-}
-.card-lbl{
-  font-size:10px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;
-  color:#6b7280;margin-bottom:11px;
-  display:flex;align-items:center;gap:7px;
-}
+/* CARD */
+.card{background:#fff;border:1px solid #e2e6ee;border-radius:12px;padding:18px 20px;box-shadow:0 2px 10px rgba(0,0,0,.045);}
+.card-lbl{font-size:10px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;color:#6b7280;margin-bottom:11px;display:flex;align-items:center;gap:7px;}
 .cdot{width:8px;height:8px;border-radius:50%;background:#0070D2;flex-shrink:0;}
-.cdot.r{background:#DC2626;} .cdot.g{background:#16A34A;} .cdot.a{background:#b45309;}
+.cdot.r{background:#DC2626;} .cdot.g{background:#16A34A;}
 
-/* ── TABLE ── */
+/* SECTION LABEL */
+.sec-lbl{font-size:10.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#374151;margin-bottom:13px;display:flex;align-items:center;gap:9px;}
+.sec-lbl::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,#d1d5db,transparent);}
+
+/* TABLE */
 .etbl{width:100%;border-collapse:collapse;font-size:12px;}
-.etbl thead th{
-  background:#f8f9fc;
-  padding:9px 11px;text-align:left;
-  font-size:10.5px;font-weight:700;color:#6b7280;
-  letter-spacing:.4px;text-transform:uppercase;
-  border-bottom:2px solid #e5e7eb;
-}
-.etbl tbody td{
-  padding:9px 11px;border-bottom:1px solid #f3f4f6;
-  color:#1a1f2e;vertical-align:middle;
-}
+.etbl thead th{background:#f8f9fc;padding:9px 11px;text-align:left;font-size:10.5px;font-weight:700;color:#6b7280;letter-spacing:.4px;text-transform:uppercase;border-bottom:2px solid #e5e7eb;}
+.etbl tbody td{padding:9px 11px;border-bottom:1px solid #f3f4f6;color:#1a1f2e;vertical-align:middle;}
 .etbl tbody tr:last-child td{border-bottom:none;}
 .etbl tbody tr:hover{background:#fafbfd;}
-.cr{color:#DC2626;font-weight:700;}
-.cam{color:#b45309;font-weight:600;}
-.cg2{color:#16A34A;font-weight:600;}
-.cbl{color:#2563eb;font-weight:600;}
+.cr{color:#DC2626;font-weight:700;} .cam{color:#b45309;font-weight:600;} .cg2{color:#16A34A;font-weight:600;} .cbl{color:#2563eb;font-weight:600;}
 
-/* ── PILL ── */
+/* PILL */
 .pill{display:inline-flex;align-items:center;padding:2px 9px;border-radius:12px;font-size:10.5px;font-weight:700;white-space:nowrap;}
 .pr{background:#fef2f2;color:#DC2626;border:1px solid #fecaca;}
 .pam{background:#fffbeb;color:#b45309;border:1px solid #fde68a;}
 .pg{background:#f0fdf4;color:#16A34A;border:1px solid #bbf7d0;}
-.pb{background:#eff6ff;color:#2563eb;border:1px solid #bfdbfe;}
 
-/* ── BAR CHART ── */
-.bchart{padding:2px 0;}
-.brow{display:flex;align-items:center;gap:9px;margin-bottom:9px;}
-.brow:last-child{margin-bottom:0;}
-.bname{width:138px;font-size:11px;color:#6b7280;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.btrack{flex:1;background:#f3f4f6;border-radius:4px;height:11px;overflow:hidden;}
-.bfill{height:100%;border-radius:4px;transition:width .3s ease;}
-.bval{width:66px;font-size:11px;font-weight:700;text-align:right;flex-shrink:0;}
-
-/* ── TIMELINE ── */
-.tline{position:relative;padding-left:22px;}
-.tline::before{content:'';position:absolute;left:7px;top:4px;bottom:4px;width:2px;background:linear-gradient(180deg,#0070D2,#e5e7eb);}
-.titem{position:relative;margin-bottom:14px;}
-.titem:last-child{margin-bottom:0;}
-.tdot{
-  position:absolute;left:-22px;top:4px;
-  width:13px;height:13px;border-radius:50%;
-  background:#0070D2;border:2px solid #fff;
-  box-shadow:0 0 0 2px #0070D2;
-}
-.tdot.tr{background:#DC2626;box-shadow:0 0 0 2px #DC2626;}
-.tdot.ta{background:#b45309;box-shadow:0 0 0 2px #b45309;}
-.tdate{font-size:10.5px;color:#6b7280;font-weight:700;}
-.ttxt{font-size:12px;color:#374151;margin-top:1px;}
-.tval{font-size:11.5px;font-weight:800;color:#DC2626;}
-
-/* ── FINDINGS ── */
-.find-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
-.find-item{
-  display:flex;gap:11px;align-items:flex-start;
-  padding:12px 14px;
-  background:linear-gradient(135deg,#f8f9fc,#f1f4fb);
-  border-radius:9px;
-  border-left:3px solid #0070D2;
-  box-shadow:0 1px 4px rgba(0,0,0,.04);
-}
-.fnum{
-  width:24px;height:24px;border-radius:50%;
-  background:linear-gradient(135deg,#0070D2,#005fad);
-  color:#fff;font-size:11px;font-weight:800;
-  display:flex;align-items:center;justify-content:center;
-  flex-shrink:0;margin-top:1px;
-  box-shadow:0 2px 6px rgba(0,112,210,.3);
-}
-.ftxt{font-size:12px;color:#374151;line-height:1.55;}
-.ftxt strong{color:#1a1f2e;}
-
-/* ── RISK BOX ── */
-.rbox{
-  background:linear-gradient(135deg,#fff5f5,#fef2f2);
-  border:1.5px solid #fecaca;
-  border-radius:12px;padding:18px 20px;
-  box-shadow:0 3px 14px rgba(220,38,38,.07);
-}
+/* RISK BOX */
+.rbox{background:linear-gradient(135deg,#fff5f5,#fef2f2);border:1.5px solid #fecaca;border-radius:12px;padding:18px 20px;box-shadow:0 3px 14px rgba(220,38,38,.07);}
 .rbox-hd{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
-.rbox-icon{
-  width:32px;height:32px;border-radius:8px;
-  background:linear-gradient(135deg,#DC2626,#b91c1c);
-  display:flex;align-items:center;justify-content:center;
-  font-size:15px;color:#fff;flex-shrink:0;
-  box-shadow:0 3px 10px rgba(220,38,38,.35);
-}
+.rbox-icon{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,#DC2626,#b91c1c);display:flex;align-items:center;justify-content:center;font-size:15px;color:#fff;flex-shrink:0;box-shadow:0 3px 10px rgba(220,38,38,.35);}
 .rbox-ttl{font-size:13px;font-weight:800;color:#DC2626;}
-.ritem{
-  display:flex;align-items:flex-start;gap:9px;
-  margin-bottom:9px;padding-bottom:9px;
-  border-bottom:1px solid #fee2e2;
-}
+.ritem{display:flex;align-items:flex-start;gap:9px;margin-bottom:9px;padding-bottom:9px;border-bottom:1px solid #fee2e2;}
 .ritem:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
-.rbullet{
-  width:18px;height:18px;border-radius:50%;
-  background:linear-gradient(135deg,#DC2626,#b91c1c);
-  color:#fff;font-size:9px;font-weight:800;
-  display:flex;align-items:center;justify-content:center;
-  flex-shrink:0;margin-top:2px;
-}
+.rbullet{width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#DC2626,#b91c1c);color:#fff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
 .rtxt{font-size:12px;color:#7f1d1d;line-height:1.55;}
 .rtxt strong{color:#DC2626;}
 
-/* ── ACTION BOX ── */
-.abox{
-  background:linear-gradient(135deg,#f0fdf6,#f0fdf4);
-  border:1.5px solid #bbf7d0;
-  border-radius:12px;padding:18px 20px;
-  box-shadow:0 3px 14px rgba(22,163,74,.07);
-}
+/* ACTION BOX */
+.abox{background:linear-gradient(135deg,#f0fdf6,#f0fdf4);border:1.5px solid #bbf7d0;border-radius:12px;padding:18px 20px;box-shadow:0 3px 14px rgba(22,163,74,.07);}
 .abox-hd{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
-.abox-icon{
-  width:32px;height:32px;border-radius:8px;
-  background:linear-gradient(135deg,#16A34A,#15803d);
-  display:flex;align-items:center;justify-content:center;
-  font-size:15px;color:#fff;flex-shrink:0;
-  box-shadow:0 3px 10px rgba(22,163,74,.35);
-}
+.abox-icon{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,#16A34A,#15803d);display:flex;align-items:center;justify-content:center;font-size:15px;color:#fff;flex-shrink:0;box-shadow:0 3px 10px rgba(22,163,74,.35);}
 .abox-ttl{font-size:13px;font-weight:800;color:#16A34A;}
-.aitem{
-  display:flex;align-items:flex-start;gap:9px;
-  margin-bottom:9px;padding-bottom:9px;
-  border-bottom:1px solid #d1fae5;
-}
+.aitem{display:flex;align-items:flex-start;gap:9px;margin-bottom:9px;padding-bottom:9px;border-bottom:1px solid #d1fae5;}
 .aitem:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
-.achk{
-  width:18px;height:18px;border-radius:5px;
-  background:linear-gradient(135deg,#16A34A,#15803d);
-  color:#fff;font-size:11px;font-weight:900;
-  display:flex;align-items:center;justify-content:center;
-  flex-shrink:0;margin-top:2px;
-  box-shadow:0 2px 6px rgba(22,163,74,.3);
-}
+.achk{width:18px;height:18px;border-radius:5px;background:linear-gradient(135deg,#16A34A,#15803d);color:#fff;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;box-shadow:0 2px 6px rgba(22,163,74,.3);}
 .atxt{font-size:12px;color:#14532d;line-height:1.55;}
 .atxt strong{color:#16A34A;}
 
-/* ── SPARKLINE ── */
-.spark{display:flex;align-items:flex-end;gap:4px;}
-.sc{flex:1;border-radius:3px 3px 0 0;min-width:8px;}
+/* FIND GRID */
+.find-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+.find-item{display:flex;gap:11px;align-items:flex-start;padding:12px 14px;background:linear-gradient(135deg,#f8f9fc,#f1f4fb);border-radius:9px;border-left:3px solid #0070D2;box-shadow:0 1px 4px rgba(0,0,0,.04);}
+.fnum{width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#0070D2,#005fad);color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;box-shadow:0 2px 6px rgba(0,112,210,.3);}
+.ftxt{font-size:12px;color:#374151;line-height:1.55;}
+.ftxt strong{color:#1a1f2e;}
 
-/* ── STAT ROW ── */
-.srow{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px;}
-.schip{
-  padding:3px 10px;border-radius:6px;
-  font-size:11px;font-weight:600;
-  background:#f8f9fc;border:1px solid #e5e7eb;color:#374151;
-}
-.schip span{font-weight:800;}
+/* EXPOSURE STRIP */
+.exposure{background:linear-gradient(135deg,#fff5f5,#fef2f2);border:1.5px solid #fecaca;border-radius:10px;padding:13px 18px;margin-bottom:16px;display:flex;align-items:center;gap:14px;}
+.exp-icon{font-size:20px;flex-shrink:0;}
+.exp-lbl{font-size:11px;font-weight:700;color:#DC2626;text-transform:uppercase;letter-spacing:.5px;}
+.exp-val{font-size:18px;font-weight:900;color:#DC2626;letter-spacing:-.3px;}
 
-/* ── ALERT STRIP ── */
-.alert-strip{
-  padding:9px 14px;border-radius:7px;
-  font-size:11.5px;line-height:1.5;
-  margin-top:10px;
-}
-.alert-r{background:#fef2f2;border-left:3px solid #DC2626;color:#7f1d1d;}
-.alert-r strong{color:#DC2626;}
-.alert-b{background:#eff6ff;border-left:3px solid #2563eb;color:#1e3a8a;}
-.alert-b strong{color:#2563eb;}
-
-/* ── SUMMARY STRIP ── */
-.summary-strip{
-  background:linear-gradient(135deg,#001e4a,#003870);
-  border-radius:12px;padding:16px 22px;margin-bottom:18px;
-  display:flex;align-items:center;justify-content:space-around;gap:10px;
-  box-shadow:0 4px 18px rgba(0,40,100,.18);
-  flex-wrap:wrap;
-}
-.sum-item{text-align:center;flex:1;min-width:100px;}
-.sum-val{font-size:22px;font-weight:900;color:#fff;line-height:1.1;letter-spacing:-.5px;}
-.sum-lbl{font-size:10px;color:rgba(255,255,255,.58);font-weight:600;letter-spacing:.4px;text-transform:uppercase;margin-top:3px;}
-.sum-sep{width:1px;height:40px;background:rgba(255,255,255,.15);flex-shrink:0;}
-
-/* ── FOOTER ── */
-.footer{
-  text-align:center;padding:22px 20px 18px;
-  font-size:11px;color:#9ca3af;
-  border-top:1px solid #e5e7eb;
-  max-width:1320px;margin:8px auto 0;
-}
+/* FOOTER */
+.footer{text-align:center;padding:22px 20px 18px;font-size:11px;color:#9ca3af;border-top:1px solid #e5e7eb;max-width:1320px;margin:8px auto 0;}
 .footer strong{color:#6b7280;}
 
-/* ── RESPONSIVE ── */
-@media(max-width:1000px){.kpi-row{grid-template-columns:repeat(2,1fr);}.g3{grid-template-columns:repeat(2,1fr);}.find-grid{grid-template-columns:1fr;}}
-@media(max-width:700px){.kpi-row,.g2,.g3{grid-template-columns:1fr;}.scr-head{flex-direction:column;}.scr-badges{align-items:flex-start;}.summary-strip{flex-direction:column;}.sum-sep{display:none;}}
+/* CROSS mark */
+.xmark{color:#DC2626;font-weight:700;}
+
+@media(max-width:1000px){.g3{grid-template-columns:repeat(2,1fr);}.find-grid{grid-template-columns:1fr;}}
+@media(max-width:700px){.g2,.g3{grid-template-columns:1fr;}.scr-head{flex-direction:column;}.scr-badges{align-items:flex-start;}}
 </style>
 </head>
 <body>
 
-<!-- ══ GLOBAL HEADER ══ -->
+<!-- HEADER -->
 <header class="g-header">
   <div class="g-inner">
     <div class="brand">
@@ -364,167 +129,103 @@ body{
     </div>
     <div class="h-right">
       <div class="h-badge"><span class="h-badge-dot"></span>AI AGENTS ACTIVE</div>
-      <div class="h-meta">SAP Analytics Cloud &nbsp;|&nbsp; Executive Compliance Story<br>
-      Reporting Period: Jan–Dec 2024 &nbsp;·&nbsp; Real-time Refresh</div>
+      <div class="h-meta">SAP Analytics Cloud &nbsp;|&nbsp; Executive Compliance Story<br>Reporting Period: 2024 &nbsp;·&nbsp; Real-time</div>
     </div>
   </div>
 </header>
 
 <div class="page">
 
-<!-- ══════════════════════════════════════════
+<!-- ═══════════════════════════════
      SCREEN 1 — SPEAKER FEE KICKBACKS
-══════════════════════════════════════════ -->
+═══════════════════════════════ -->
 <div class="screen-block">
 
   <div class="scr-head">
-    <div class="scr-title-col">
-      <div class="scr-tag">&#9679; Investigation Case &nbsp;IC-2024-0341</div>
-      <div class="scr-title">Speaker Fee Kickbacks &amp; Temporal Prescription Anomalies</div>
-      <div class="scr-sub">HCP payment timeline analysis &nbsp;&middot;&nbsp; Prescription growth correlation &nbsp;&middot;&nbsp; Speaker fee peer benchmarking &nbsp;&middot;&nbsp; Anti-Kickback Statute monitoring</div>
+    <div>
+      <div class="scr-tag">&#9679; Screen 1</div>
+      <div class="scr-title">Speaker Fee Kickbacks &amp; Temporal Rx Anomalies</div>
+      <div class="scr-sub">HCP Timeline Analysis: Dr. Sarah Chen (Cardiology)</div>
     </div>
     <div class="scr-badges">
-      <span class="badge b-risk"><span class="bdot"></span>CRITICAL RISK DETECTED</span>
+      <span class="badge b-risk"><span class="bdot"></span>AKS RISK DETECTED</span>
       <span class="badge b-act"><span class="bdot"></span>AI AGENT ACTIVE</span>
-      <span class="badge b-blue">7 HCPs FLAGGED</span>
     </div>
   </div>
 
-  <!-- Summary strip -->
-  <div class="summary-strip">
-    <div class="sum-item"><div class="sum-val" style="color:#fca5a5;">$2.47M</div><div class="sum-lbl">Aggregate Speaker Fees</div></div>
-    <div class="sum-sep"></div>
-    <div class="sum-item"><div class="sum-val" style="color:#fde68a;">6.2×</div><div class="sum-lbl">FMV Exceedance (Avg.)</div></div>
-    <div class="sum-sep"></div>
-    <div class="sum-item"><div class="sum-val" style="color:#fca5a5;">r = 0.91</div><div class="sum-lbl">Rx Correlation Coefficient</div></div>
-    <div class="sum-sep"></div>
-    <div class="sum-item"><div class="sum-val" style="color:#fde68a;">94 days</div><div class="sum-lbl">Avg. Fee-to-Rx Lag</div></div>
-    <div class="sum-sep"></div>
-    <div class="sum-item"><div class="sum-val" style="color:#86efac;">6</div><div class="sum-lbl">Autonomous Actions Taken</div></div>
+  <!-- Estimated Exposure -->
+  <div class="exposure">
+    <div class="exp-icon">&#9888;</div>
+    <div>
+      <div class="exp-lbl">Estimated Fine Exposure (Industry Precedent)</div>
+      <div class="exp-val">$150M &ndash; $250M &nbsp;&nbsp;|&nbsp;&nbsp; Anti-Kickback Statute (AKS) risk detected</div>
+    </div>
   </div>
 
-  <!-- KPIs -->
-  <div class="kpi-row">
-    <div class="kpi red"><div class="kpi-v vr">$2.47M</div><div class="kpi-l">Aggregate Speaker Fees — Flagged HCPs</div><div class="kpi-c cu">&#8593; 183% vs. Peer Cohort</div></div>
-    <div class="kpi red"><div class="kpi-v vr">7</div><div class="kpi-l">HCPs with Correlated Prescription Surge</div><div class="kpi-c cu">Risk Score: 9.4 / 10</div></div>
-    <div class="kpi amber"><div class="kpi-v va">$352K</div><div class="kpi-l">Avg. Annual Fee per Flagged HCP</div><div class="kpi-c cw">&#8593; 6.2&#215; Fair Market Value</div></div>
-    <div class="kpi"><div class="kpi-v vb">94 days</div><div class="kpi-l">Avg. Lag: Payment &#8594; Prescription Spike</div><div class="kpi-c cb">Temporal Correlation: 0.91</div></div>
-  </div>
-
-  <div class="sec-lbl">&#128203; Investigation Evidence</div>
   <div class="g2">
+    <!-- HCP Timeline Table -->
     <div class="card">
-      <div class="card-lbl"><span class="cdot r"></span>HCP Speaker Fee vs. Prescription Volume Correlation</div>
+      <div class="card-lbl"><span class="cdot r"></span>HCP Timeline Analysis — Dr. Sarah Chen (Cardiology)</div>
       <table class="etbl">
-        <thead><tr><th>HCP / Specialty</th><th>Speaker Fees</th><th>FMV Threshold</th><th>Rx &#916; Post-Fee</th><th>Status</th></tr></thead>
+        <thead>
+          <tr><th>Event Date</th><th>Activity Type</th><th>Payment (USD)</th><th>90-Day Rx Vol Delta</th><th>Peer Avg Rx Delta</th></tr>
+        </thead>
         <tbody>
-          <tr><td><strong>Dr. A. Mehta</strong><br><span style="font-size:10.5px;color:#9ca3af">Oncology &ndash; NJ</span></td><td class="cr">$487,500</td><td class="cam">$72,000</td><td class="cr">+412%</td><td><span class="pill pr">CRITICAL</span></td></tr>
-          <tr><td><strong>Dr. R. Okonkwo</strong><br><span style="font-size:10.5px;color:#9ca3af">Cardiology &ndash; TX</span></td><td class="cr">$391,200</td><td class="cam">$68,000</td><td class="cr">+287%</td><td><span class="pill pr">CRITICAL</span></td></tr>
-          <tr><td><strong>Dr. C. Liu</strong><br><span style="font-size:10.5px;color:#9ca3af">Neurology &ndash; CA</span></td><td class="cr">$344,800</td><td class="cam">$65,000</td><td class="cr">+331%</td><td><span class="pill pr">CRITICAL</span></td></tr>
-          <tr><td><strong>Dr. P. Vasquez</strong><br><span style="font-size:10.5px;color:#9ca3af">Rheumatology &ndash; FL</span></td><td class="cam">$268,400</td><td class="cam">$60,000</td><td class="cr">+198%</td><td><span class="pill pam">HIGH</span></td></tr>
-          <tr><td><strong>Dr. S. Nakamura</strong><br><span style="font-size:10.5px;color:#9ca3af">Psychiatry &ndash; NY</span></td><td class="cam">$213,600</td><td class="cam">$55,000</td><td class="cr">+162%</td><td><span class="pill pam">HIGH</span></td></tr>
+          <tr><td>Feb 14, 2024</td><td>Keynote Speaker</td><td class="cbl">$10,000</td><td class="cr">+28%</td><td class="cg2">+3%</td></tr>
+          <tr><td>Apr 02, 2024</td><td>Panel Moderator</td><td class="cbl">$10,000</td><td class="cr">+31%</td><td class="cg2">+4%</td></tr>
+          <tr><td>Jun 18, 2024</td><td>Regional Speaker</td><td class="cbl">$10,000</td><td class="cr">+35%</td><td class="cg2">+2%</td></tr>
+          <tr><td>Jul 22, 2024</td><td>Symposium Lead</td><td class="cbl">$10,000</td><td class="cr">+38%</td><td class="cg2">+4%</td></tr>
+          <tr><td>Sep 14, 2024</td><td>Keynote Speaker</td><td class="cbl">$10,000</td><td class="cr">+28%</td><td class="cg2">+3%</td></tr>
+          <tr><td>Oct 18, 2024</td><td>Regional Speaker</td><td class="cbl">$10,000</td><td class="cr">+35%</td><td class="cg2">+2%</td></tr>
+          <tr><td>Nov 02, 2024</td><td>Panel Moderator</td><td class="cbl">$10,000</td><td class="cr">+31%</td><td class="cg2">+4%</td></tr>
+          <tr><td>Dec 18, 2024</td><td>Regional Speaker</td><td class="cbl">$10,000</td><td class="cr">+35%</td><td class="cg2">+2%</td></tr>
         </tbody>
       </table>
     </div>
+
     <div style="display:flex;flex-direction:column;gap:14px;">
+      <!-- Peer Comparison -->
       <div class="card">
-        <div class="card-lbl"><span class="cdot"></span>Temporal Payment–Prescription Timeline (Dr. A. Mehta, 2024)</div>
-        <div class="tline">
-          <div class="titem"><div class="tdot"></div><div class="tdate">Jan 2024</div><div class="ttxt">Speaker bureau engagement initiated. <span class="tval">Fee: $87,500</span></div></div>
-          <div class="titem"><div class="tdot tr"></div><div class="tdate">Feb–Mar 2024</div><div class="ttxt">3 speaking engagements logged. Rx baseline: 48 scripts/month.</div></div>
-          <div class="titem"><div class="tdot tr"></div><div class="tdate">Apr 2024 &nbsp;<span style="font-size:9.5px;color:#DC2626;font-weight:800;">&#9888; ANOMALY</span></div><div class="ttxt">Prescription volume surges to 197 scripts/month. <span class="tval">+310% in 6 weeks</span></div></div>
-          <div class="titem"><div class="tdot tr"></div><div class="tdate">May–Jul 2024</div><div class="ttxt">Additional $400,000 in fees disbursed across 4 installments. Pattern repeats across all 7 HCPs.</div></div>
-          <div class="titem"><div class="tdot"></div><div class="tdate">Aug 2024</div><div class="ttxt">Pharma PayGuard AI flags temporal correlation. <span style="color:#0070D2;font-weight:700;">Autonomous investigation triggered.</span></div></div>
-        </div>
+        <div class="card-lbl"><span class="cdot"></span>Peer Comparison — Same Specialty | Same Regions | Same Period</div>
+        <table class="etbl">
+          <thead><tr><th>Metric</th><th>Dr. Sarah Chen</th><th>Peer Cardiologists (avg)</th></tr></thead>
+          <tbody>
+            <tr><td>Rx Volume Growth (2024)</td><td class="cr">+33%</td><td class="cg2">+3%</td></tr>
+            <tr><td>Speaker Engagements (YTD)</td><td class="cr">8 engagements</td><td class="cg2">2 per year (industry avg)</td></tr>
+            <tr><td>Total Fees Received (YTD)</td><td class="cr">$80,000</td><td class="cg2">$15,000–$20,000</td></tr>
+          </tbody>
+        </table>
       </div>
+
+      <!-- Systemic Pattern -->
       <div class="card">
-        <div class="card-lbl"><span class="cdot"></span>Peer Cohort Benchmarking — Speaker Fees (Oncology, NJ)</div>
-        <div class="bchart">
-          <div class="brow"><div class="bname">Dr. A. Mehta &#128681;</div><div class="btrack"><div class="bfill" style="width:100%;background:linear-gradient(90deg,#DC2626,#ef4444);"></div></div><div class="bval cr">$487.5K</div></div>
-          <div class="brow"><div class="bname">Peer Avg. (Top 10%)</div><div class="btrack"><div class="bfill" style="width:27%;background:#f97316;"></div></div><div class="bval cam">$132K</div></div>
-          <div class="brow"><div class="bname">FMV Cap (Oncology)</div><div class="btrack"><div class="bfill" style="width:15%;background:#2563eb;"></div></div><div class="bval cbl">$72K</div></div>
-          <div class="brow"><div class="bname">Cohort Median</div><div class="btrack"><div class="bfill" style="width:9%;background:#16A34A;"></div></div><div class="bval cg2">$43K</div></div>
-        </div>
-        <div class="srow"><div class="schip">Cohort: <span>94 HCPs</span></div><div class="schip">FMV Model: <span>2024 NERA</span></div><div class="schip">Specialty: <span>Oncology</span></div></div>
+        <div class="card-lbl"><span class="cdot r"></span>Systemic Pattern Aggregation — Agent Finding</div>
+        <table class="etbl">
+          <tbody>
+            <tr><td>Payment followed by Rx spike (90 days)</td><td class="cr">8 of 8 instances</td></tr>
+            <tr><td>Sales rep managing all flagged HCPs</td><td class="cam">Jake Miller (common for all cases)</td></tr>
+            <tr><td>Other HCPs exhibiting similar pattern</td><td class="cr">5 more cases</td></tr>
+          </tbody>
+        </table>
       </div>
-    </div>
-  </div>
-
-  <div class="g3">
-    <div class="card">
-      <div class="card-lbl"><span class="cdot r"></span>Speaker Event Anomaly Indicators</div>
-      <table class="etbl">
-        <thead><tr><th>Indicator</th><th>Flagged</th><th>Policy</th></tr></thead>
-        <tbody>
-          <tr><td>Repeat attendees</td><td class="cr">78%</td><td class="cbl">&lt;25%</td></tr>
-          <tr><td>Avg. audience size</td><td class="cr">2.3</td><td class="cbl">&#8805;8</td></tr>
-          <tr><td>Events in 30 days</td><td class="cr">11</td><td class="cbl">&#8804;4</td></tr>
-          <tr><td>Meal cost per head</td><td class="cr">$487</td><td class="cbl">&#8804;$150</td></tr>
-          <tr><td>No educational slides</td><td class="cr">6 of 11</td><td class="cbl">0</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="card">
-      <div class="card-lbl"><span class="cdot r"></span>Speaker Fee Concentration — Product Alignment</div>
-      <div class="bchart" style="margin-top:4px;">
-        <div class="brow"><div class="bname">OncaGuard&#8482; (Rx)</div><div class="btrack"><div class="bfill" style="width:92%;background:linear-gradient(90deg,#DC2626,#ef4444);"></div></div><div class="bval cr">$1.84M</div></div>
-        <div class="brow"><div class="bname">CardioBloc&#8482; (Rx)</div><div class="btrack"><div class="bfill" style="width:38%;background:#f97316;"></div></div><div class="bval cam">$390K</div></div>
-        <div class="brow"><div class="bname">NeuroPlex&#8482; (Rx)</div><div class="btrack"><div class="bfill" style="width:18%;background:#f97316;"></div></div><div class="bval cam">$175K</div></div>
-        <div class="brow"><div class="bname">General Education</div><div class="btrack"><div class="bfill" style="width:6%;background:#16A34A;"></div></div><div class="bval cg2">$62K</div></div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-lbl"><span class="cdot r"></span>Monthly Rx Trend vs. Fee Cadence (Dr. Mehta, 2024)</div>
-      <div class="spark" style="height:60px;margin-top:10px;">
-        <div class="sc" style="height:18%;background:#d1d5db;"></div>
-        <div class="sc" style="height:21%;background:#d1d5db;"></div>
-        <div class="sc" style="height:25%;background:#fbbf24;"></div>
-        <div class="sc" style="height:68%;background:#ef4444;"></div>
-        <div class="sc" style="height:82%;background:#ef4444;"></div>
-        <div class="sc" style="height:71%;background:#fbbf24;"></div>
-        <div class="sc" style="height:78%;background:#ef4444;"></div>
-        <div class="sc" style="height:90%;background:#DC2626;"></div>
-        <div class="sc" style="height:85%;background:#DC2626;"></div>
-        <div class="sc" style="height:88%;background:#DC2626;"></div>
-        <div class="sc" style="height:80%;background:#DC2626;"></div>
-        <div class="sc" style="height:76%;background:#DC2626;"></div>
-      </div>
-      <div style="display:flex;justify-content:space-between;font-size:10px;color:#9ca3af;margin-top:4px;"><span>Jan</span><span>Jun</span><span>Dec</span></div>
-      <div class="srow" style="margin-top:8px;">
-        <div class="schip" style="background:#fef2f2;border-color:#fecaca;color:#DC2626;font-size:10.5px;">&#9632; Post-fee surge</div>
-        <div class="schip" style="background:#fffbeb;border-color:#fde68a;color:#b45309;font-size:10.5px;">&#9632; Fee month</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="sec-lbl">&#129302; AI Agent Findings</div>
-  <div class="card gfull">
-    <div class="find-grid">
-      <div class="find-item"><div class="fnum">1</div><div class="ftxt"><strong>Statistically significant temporal correlation (r = 0.91)</strong> detected between speaker fee disbursement and prescription volume increases across 7 HCPs, with a consistent 60–120 day lag — suggesting conditioned prescribing behavior rather than educational impact.</div></div>
-      <div class="find-item"><div class="fnum">2</div><div class="ftxt"><strong>Speaker fees for 5 HCPs exceed FMV by 3.8&#215; to 6.8&#215;</strong>, with cumulative overages totaling $1.9M against NERA-calibrated caps. Three HCPs received fees split across 4 cost centers to fragment visibility.</div></div>
-      <div class="find-item"><div class="fnum">3</div><div class="ftxt"><strong>Speaker program operational anomalies confirm events were not bona fide:</strong> 78% repeat attendees, average audience of 2.3, and 6 of 11 events had zero educational content per CRM logs — inconsistent with legitimate medical education.</div></div>
-      <div class="find-item"><div class="fnum">4</div><div class="ftxt"><strong>94% of flagged fees concentrated on three branded products</strong> (OncaGuard&#8482;, CardioBloc&#8482;, NeuroPlex&#8482;), each showing post-payment Rx surges — consistent with a coordinated incentive structure rather than isolated incidents.</div></div>
-      <div class="find-item"><div class="fnum">5</div><div class="ftxt"><strong>SAP Concur and Sunshine Act reconciliation gap: $341,000.</strong> Fees disbursed via auxiliary vendor accounts were not aggregated into annual Open Payments reporting, creating a material omission exposure under 42 U.S.C. §1320a-7h.</div></div>
     </div>
   </div>
 
   <div class="g2">
+    <!-- Agent Identified Risks -->
     <div class="rbox">
-      <div class="rbox-hd"><div class="rbox-icon">&#9888;</div><div class="rbox-ttl">Agent Identified Risks — Compliance &amp; Anti-Kickback</div></div>
-      <div class="ritem"><div class="rbullet">!</div><div class="rtxt"><strong>Anti-Kickback Statute (AKS) Violation:</strong> Fees correlated with Rx increases constitute remuneration under 42 U.S.C. §1320a-7b(b) — criminal penalties up to $100,000 per occurrence and federal program exclusion.</div></div>
-      <div class="ritem"><div class="rbullet">!</div><div class="rtxt"><strong>Sunshine Act Material Omission:</strong> $341,000 in unreported transfers creates false Open Payments submissions — CMS civil penalties up to $1.15M per reporting cycle.</div></div>
-      <div class="ritem"><div class="rbullet">!</div><div class="rtxt"><strong>False Claims Act Secondary Exposure:</strong> Kickback-influenced prescriptions reimbursed by federal programs carry FCA liability of up to 3&#215; damages plus $27,000 per false claim.</div></div>
-      <div class="ritem"><div class="rbullet">!</div><div class="rtxt"><strong>PhRMA Code Non-Compliance:</strong> Events with &lt;3 attendees, no educational content, and excessive meal costs violate PhRMA Code sections 8.1–8.4 — reputational and voluntary compliance integrity risk.</div></div>
-      <div class="ritem"><div class="rbullet">!</div><div class="rtxt"><strong>OIG Exclusion Risk:</strong> Payments to high-prescribers above FMV with documented Rx correlation meets OIG criteria for advisory opinion referral and potential permissive exclusion from federal healthcare programs.</div></div>
+      <div class="rbox-hd"><div class="rbox-icon">&#9888;</div><div class="rbox-ttl">Agent Identified Risks</div></div>
+      <div class="ritem"><div class="rbullet">!</div><div class="rtxt"><strong>Dr. Chen's Rx growth is 11 times the peer average</strong> in the same period with 4 times higher engagement.</div></div>
+      <div class="ritem"><div class="rbullet">!</div><div class="rtxt"><strong>Every single payment batch is followed by a measurable prescription spike.</strong></div></div>
+      <div class="ritem"><div class="rbullet">!</div><div class="rtxt"><strong>Anti-Kickback Statute (AKS) risk detected.</strong> Estimated fine exposure (industry precedent): <strong>$150M – $250M</strong></div></div>
     </div>
+
+    <!-- Agent Performed Actions -->
     <div class="abox">
-      <div class="abox-hd"><div class="abox-icon">&#10003;</div><div class="abox-ttl">Autonomous Agent Interventions — Executed</div></div>
-      <div class="aitem"><div class="achk">&#10003;</div><div class="atxt"><strong>All pending speaker fee disbursements automatically suspended</strong> for 7 flagged HCPs; SAP payment workflow gated with mandatory Legal sign-off injected into the approval chain.</div></div>
-      <div class="aitem"><div class="achk">&#10003;</div><div class="atxt"><strong>Sunshine Act reconciliation audit automatically initiated;</strong> AI cross-referenced auxiliary vendor accounts against Open Payments database — $341K discrepancy dossier generated for CMS voluntary correction filing.</div></div>
-      <div class="aitem"><div class="achk">&#10003;</div><div class="atxt"><strong>HCP speaker program eligibility automatically revoked</strong> for all 7 individuals; speaker bureau contract pause flag raised in CRM and SAP Vendor Master with compliance hold designation.</div></div>
-      <div class="aitem"><div class="achk">&#10003;</div><div class="atxt"><strong>Prescription correlation evidence dossier automatically compiled:</strong> 14-month Rx trend analysis, FMV deviation reports, speaker event attendance logs, and cost-center fragmentation mapping submitted to the Chief Compliance Officer.</div></div>
-      <div class="aitem"><div class="achk">&#10003;</div><div class="atxt"><strong>AKS risk assessment automatically routed</strong> to OIG monitoring dashboard; external counsel engagement request auto-generated with case timeline, exposure calculations, and evidence index.</div></div>
-      <div class="aitem"><div class="achk">&#10003;</div><div class="atxt"><strong>FMV recalibration workflow automatically triggered:</strong> Speaker fee ceiling rules updated in SAP to block future disbursements exceeding NERA-validated specialty thresholds without dual compliance approval.</div></div>
+      <div class="abox-hd"><div class="abox-icon">&#10003;</div><div class="abox-ttl">Agent Performed Actions</div></div>
+      <div class="aitem"><div class="achk">&#10003;</div><div class="atxt"><strong>Upcoming payments autonomously placed on hold</strong> for all 6 suspicious cases.</div></div>
+      <div class="aitem"><div class="achk">&#10003;</div><div class="atxt"><strong>Individual compliance cases created</strong> for all 6 cases, including the evidence dossier for each suspicious case.</div></div>
+      <div class="aitem"><div class="achk">&#10003;</div><div class="atxt"><strong>Employee compliance case reported</strong> for Sales Rep Jake Miller.</div></div>
     </div>
   </div>
 
@@ -532,150 +233,73 @@ body{
 
 <div class="screen-divider"></div>
 
-<!-- ══════════════════════════════════════════
+<!-- ═══════════════════════════════════════
      SCREEN 2 — FICTITIOUS ADVISORY MEETINGS
-══════════════════════════════════════════ -->
+═══════════════════════════════════════ -->
 <div class="screen-block">
 
   <div class="scr-head">
-    <div class="scr-title-col">
-      <div class="scr-tag">&#9679; Investigation Case &nbsp;IC-2024-0517</div>
-      <div class="scr-title">Fictitious Advisory Meetings &amp; Cross-System Forgery Detection</div>
-      <div class="scr-sub">SAP payment verification &nbsp;&middot;&nbsp; Venue validation &nbsp;&middot;&nbsp; CRM attendance forgery &nbsp;&middot;&nbsp; Travel &amp; expense reconciliation &nbsp;&middot;&nbsp; Approval governance anomalies</div>
+    <div>
+      <div class="scr-tag">&#9679; Screen 2</div>
+      <div class="scr-title">Fictitious Advisory Meetings &amp; Cross-System Forgery</div>
+      <div class="scr-sub">AI Cross-System Verification for SAP Payments</div>
     </div>
     <div class="scr-badges">
-      <span class="badge b-risk"><span class="bdot"></span>FRAUD INDICATORS CONFIRMED</span>
+      <span class="badge b-risk"><span class="bdot"></span>FCPA / EFPIA RISK DETECTED</span>
       <span class="badge b-act"><span class="bdot"></span>AI AGENT ACTIVE</span>
-      <span class="badge b-blue">$1.08M UNDER INVESTIGATION</span>
     </div>
   </div>
 
-  <div class="summary-strip">
-    <div class="sum-item"><div class="sum-val" style="color:#fca5a5;">$1.08M</div><div class="sum-lbl">Payments Under Review</div></div>
-    <div class="sum-sep"></div>
-    <div class="sum-item"><div class="sum-val" style="color:#fde68a;">18 / 23</div><div class="sum-lbl">Meetings Unverifiable</div></div>
-    <div class="sum-sep"></div>
-    <div class="sum-item"><div class="sum-val" style="color:#fca5a5;">36</div><div class="sum-lbl">Ghost HCP Attendees</div></div>
-    <div class="sum-sep"></div>
-    <div class="sum-item"><div class="sum-val" style="color:#fde68a;">$64.2K</div><div class="sum-lbl">Phantom Travel Claims</div></div>
-    <div class="sum-sep"></div>
-    <div class="sum-item"><div class="sum-val" style="color:#86efac;">6</div><div class="sum-lbl">Autonomous Actions Taken</div></div>
-  </div>
-
-  <div class="kpi-row">
-    <div class="kpi red"><div class="kpi-v vr">$1.08M</div><div class="kpi-l">Advisory Meeting Payments — Fabrication Suspected</div><div class="kpi-c cu">18 of 23 Events Invalid</div></div>
-    <div class="kpi red"><div class="kpi-v vr">18</div><div class="kpi-l">Meetings with No Verifiable Venue or Attendees</div><div class="kpi-c cu">CRM vs. SAP Mismatch: 100%</div></div>
-    <div class="kpi amber"><div class="kpi-v va">$64,200</div><div class="kpi-l">Travel Claims with No Flight or Hotel Records</div><div class="kpi-c cw">Concur–Amadeus Gap</div></div>
-    <div class="kpi amber"><div class="kpi-v va">3</div><div class="kpi-l">Approvers with Unusual SOD Override Pattern</div><div class="kpi-c cw">Segregation-of-Duty Breach</div></div>
-  </div>
-
-  <div class="sec-lbl">&#128203; Investigation Evidence</div>
-  <div class="g2">
-    <div class="card">
-      <div class="card-lbl"><span class="cdot r"></span>Cross-System Meeting Verification Matrix</div>
-      <table class="etbl">
-        <thead><tr><th>Meeting ID</th><th>SAP Invoice</th><th>CRM Log</th><th>Venue</th><th>Travel</th><th>Verdict</th></tr></thead>
-        <tbody>
-          <tr><td>ADV-2024-041</td><td class="cr">$98,400</td><td><span class="pill pr">MISSING</span></td><td><span class="pill pr">INVALID</span></td><td><span class="pill pr">NONE</span></td><td><span class="pill pr">FABRICATED</span></td></tr>
-          <tr><td>ADV-2024-055</td><td class="cr">$76,200</td><td><span class="pill pam">PARTIAL</span></td><td><span class="pill pr">INVALID</span></td><td><span class="pill pr">PHANTOM</span></td><td><span class="pill pr">FABRICATED</span></td></tr>
-          <tr><td>ADV-2024-067</td><td class="cr">$112,000</td><td><span class="pill pr">MISSING</span></td><td><span class="pill pr">CLOSED</span></td><td><span class="pill pr">NONE</span></td><td><span class="pill pr">FABRICATED</span></td></tr>
-          <tr><td>ADV-2024-079</td><td class="cam">$54,600</td><td><span class="pill pam">PARTIAL</span></td><td><span class="pill pam">UNCONF.</span></td><td><span class="pill pam">MISMATCH</span></td><td><span class="pill pam">SUSPECT</span></td></tr>
-          <tr><td>ADV-2024-091</td><td class="cg2">$38,000</td><td><span class="pill pg">CONFIRMED</span></td><td><span class="pill pg">VALID</span></td><td><span class="pill pg">MATCHED</span></td><td><span class="pill pg">LEGITIMATE</span></td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:14px;">
-      <div class="card">
-        <div class="card-lbl"><span class="cdot r"></span>Vendor Invoice Pattern — Forensic Indicators</div>
-        <table class="etbl">
-          <thead><tr><th>Indicator</th><th>Count</th><th>Amount</th><th>Flag</th></tr></thead>
-          <tbody>
-            <tr><td>Sequential invoices, same day</td><td class="cr">9</td><td class="cr">$342,000</td><td><span class="pill pr">CRITICAL</span></td></tr>
-            <tr><td>Round-number invoices &#8805;$50K</td><td class="cr">6</td><td class="cr">$384,000</td><td><span class="pill pr">HIGH</span></td></tr>
-            <tr><td>Approved &lt;15 min of submission</td><td class="cr">11</td><td class="cr">$478,200</td><td><span class="pill pr">CRITICAL</span></td></tr>
-            <tr><td>Vendor registered &lt;30 days pre-invoice</td><td class="cam">4</td><td class="cam">$164,800</td><td><span class="pill pam">HIGH</span></td></tr>
-            <tr><td>Invoices lacking tax ID / VAT ref.</td><td class="cam">7</td><td class="cam">$198,600</td><td><span class="pill pam">HIGH</span></td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="card">
-        <div class="card-lbl"><span class="cdot r"></span>Approval Override Pattern — SOD Violations</div>
-        <div class="bchart">
-          <div class="brow"><div class="bname">M. Thornton (Approver)</div><div class="btrack"><div class="bfill" style="width:100%;background:linear-gradient(90deg,#DC2626,#ef4444);"></div></div><div class="bval cr">9 overrides</div></div>
-          <div class="brow"><div class="bname">K. Brandt (Approver)</div><div class="btrack"><div class="bfill" style="width:67%;background:#DC2626;"></div></div><div class="bval cr">6 overrides</div></div>
-          <div class="brow"><div class="bname">T. Osei (Approver)</div><div class="btrack"><div class="bfill" style="width:33%;background:#f97316;"></div></div><div class="bval cam">3 overrides</div></div>
-          <div class="brow"><div class="bname">Policy Maximum</div><div class="btrack"><div class="bfill" style="width:11%;background:#2563eb;"></div></div><div class="bval cbl">&#8804;1/yr</div></div>
-        </div>
-      </div>
+  <!-- Estimated Exposure -->
+  <div class="exposure">
+    <div class="exp-icon">&#9888;</div>
+    <div>
+      <div class="exp-lbl">Estimated Fine Exposure (Industry Precedent)</div>
+      <div class="exp-val">$500M &ndash; $700M &nbsp;&nbsp;|&nbsp;&nbsp; FCPA and EFPIA Code violation risk detected</div>
     </div>
   </div>
 
-  <div class="g3">
-    <div class="card">
-      <div class="card-lbl"><span class="cdot r"></span>Travel Expense vs. Booking System Reconciliation</div>
-      <table class="etbl">
-        <thead><tr><th>Claim</th><th>Claimed</th><th>Verified</th><th>Gap</th></tr></thead>
-        <tbody>
-          <tr><td>Airfare – ADV-041</td><td>$18,400</td><td class="cr">$0</td><td class="cr">$18,400</td></tr>
-          <tr><td>Hotel – ADV-055</td><td>$12,600</td><td class="cr">$0</td><td class="cr">$12,600</td></tr>
-          <tr><td>Catering – ADV-067</td><td>$22,800</td><td class="cam">$4,200</td><td class="cr">$18,600</td></tr>
-          <tr><td>AV/Venue – ADV-079</td><td>$14,600</td><td class="cr">$0</td><td class="cr">$14,600</td></tr>
-        </tbody>
-      </table>
-      <div class="srow" style="margin-top:8px;"><div class="schip" style="background:#fef2f2;border-color:#fecaca;color:#DC2626;">Total Gap: <span>$64,200</span></div><div class="schip">Source: <span>Amadeus/Concur</span></div></div>
-    </div>
-    <div class="card">
-      <div class="card-lbl"><span class="cdot r"></span>Venue Validation — External Cross-Check Results</div>
-      <div class="bchart" style="margin-top:4px;">
-        <div class="brow"><div class="bname">Venue Not Found</div><div class="btrack"><div class="bfill" style="width:78%;background:linear-gradient(90deg,#DC2626,#ef4444);"></div></div><div class="bval cr">14 events</div></div>
-        <div class="brow"><div class="bname">Closed / Inactive</div><div class="btrack"><div class="bfill" style="width:22%;background:#f97316;"></div></div><div class="bval cam">4 events</div></div>
-        <div class="brow"><div class="bname">Confirmed Valid</div><div class="btrack"><div class="bfill" style="width:28%;background:#16A34A;"></div></div><div class="bval cg2">5 events</div></div>
-      </div>
-      <div class="alert-strip alert-b" style="margin-top:10px;"><strong>AI Cross-Check:</strong> Google Maps API &#183; Venue registries &#183; Amadeus GDS &#183; SAP Ariba vendor validation</div>
-    </div>
-    <div class="card">
-      <div class="card-lbl"><span class="cdot r"></span>CRM Attendance vs. Invoice Billing Discrepancy</div>
-      <table class="etbl">
-        <thead><tr><th>Meeting</th><th>Invoice HCPs</th><th>CRM Logged</th><th>Delta</th></tr></thead>
-        <tbody>
-          <tr><td>ADV-2024-041</td><td class="cr">12</td><td class="cr">0</td><td class="cr">&#8211;12</td></tr>
-          <tr><td>ADV-2024-055</td><td class="cr">8</td><td class="cam">2</td><td class="cr">&#8211;6</td></tr>
-          <tr><td>ADV-2024-067</td><td class="cr">15</td><td class="cr">0</td><td class="cr">&#8211;15</td></tr>
-          <tr><td>ADV-2024-079</td><td class="cam">6</td><td class="cam">3</td><td class="cam">&#8211;3</td></tr>
-        </tbody>
-      </table>
-      <div class="srow" style="margin-top:8px;"><div class="schip" style="background:#fef2f2;border-color:#fecaca;color:#DC2626;">Ghost Attendees: <span>36</span></div></div>
-    </div>
-  </div>
-
-  <div class="sec-lbl">&#129302; AI Agent Findings</div>
+  <!-- Cross-System Verification Table -->
   <div class="card gfull">
-    <div class="find-grid">
-      <div class="find-item"><div class="fnum">1</div><div class="ftxt"><strong>18 of 23 advisory meetings (78%) have no verifiable existence:</strong> cross-system reconciliation across SAP FI, CRM, Amadeus GDS, and venue registries returned zero corroborating evidence for venue occupancy, attendee travel, or HCP participation on claimed dates.</div></div>
-      <div class="find-item"><div class="fnum">2</div><div class="ftxt"><strong>Forensic invoice analysis identified fabrication signatures:</strong> 9 sequential same-day submissions ($342K), 11 approvals in under 15 minutes, and 6 round-number invoices — collectively inconsistent with legitimate procurement behavior.</div></div>
-      <div class="find-item"><div class="fnum">3</div><div class="ftxt"><strong>Three approvers executed 18 single-reviewer SOD overrides</strong> on $876,000 in transactions. Approver M. Thornton overrode controls 9 times — all involving the same 2 vendors with elevated fraud indicators.</div></div>
-      <div class="find-item"><div class="fnum">4</div><div class="ftxt"><strong>36 HCPs listed as attendees have no CRM record, travel booking, or expense claim,</strong> indicating names were inserted to legitimize billing for fabricated advisory board meetings — constituting ghost attendee fraud.</div></div>
-      <div class="find-item"><div class="fnum">5</div><div class="ftxt"><strong>$64,200 in travel expense claims have zero supporting records</strong> in Concur or Amadeus — no flights, hotels, or corporate card transactions exist for the claimed dates, classifying these as phantom expense submissions.</div></div>
-    </div>
+    <div class="card-lbl"><span class="cdot r"></span>AI Cross-System Verification for SAP Payments</div>
+    <table class="etbl">
+      <thead>
+        <tr>
+          <th>Verification Check</th>
+          <th>Berlin Conference<br><span style="font-weight:400;text-transform:none;">(Mar '24)</span></th>
+          <th>Munich Exec Lounge<br><span style="font-weight:400;text-transform:none;">(Apr '24)</span></th>
+          <th>Frankfurt Med Hub<br><span style="font-weight:400;text-transform:none;">(May '24)</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>SAP Invoice Number</td><td class="cbl">9876543210</td><td class="cbl">9876543211</td><td class="cbl">9876543212</td></tr>
+        <tr><td>Invoice Amount</td><td class="cbl">$15,000</td><td class="cbl">$15,000</td><td class="cbl">$15,000</td></tr>
+        <tr><td>Venue Booked &amp; Confirmed</td><td class="cr">&#10060; None found</td><td class="cr">&#10060; None found</td><td class="cr">&#10060; None found</td></tr>
+        <tr><td>Travel Claims Filed by Attendees</td><td class="cr">&#10060; Zero claims</td><td class="cr">&#10060; Zero claims</td><td class="cr">&#10060; Zero claims</td></tr>
+        <tr><td>Veeva CRM Event Log Entry</td><td class="cr">&#10060; No record</td><td class="cr">&#10060; No record</td><td class="cr">&#10060; No record</td></tr>
+        <tr><td>Hotel/Catering Bookings in Concur</td><td class="cr">&#10060; None found</td><td class="cr">&#10060; None found</td><td class="cr">&#10060; None found</td></tr>
+        <tr><td>HCP Location on Meeting Date</td><td class="cr">&#10060; Boston Conf.</td><td style="color:#6b7280;">—</td><td class="cr">&#10060; On surgical leave</td></tr>
+        <tr><td>Attendee Availability Confirmed</td><td class="cr">&#10060; 3 of 8 elsewhere</td><td style="color:#6b7280;">—</td><td class="cr">&#10060; 4 of 9 on leave</td></tr>
+        <tr><td>Sole Approver on ALL 3 Invoices</td><td colspan="3" class="cam">Jake Miller (common for all cases)</td></tr>
+      </tbody>
+    </table>
   </div>
 
   <div class="g2">
+    <!-- Agent Identified Risks -->
     <div class="rbox">
-      <div class="rbox-hd"><div class="rbox-icon">&#9888;</div><div class="rbox-ttl">Agent Identified Risks — Fraud &amp; Falsified Activity</div></div>
-      <div class="ritem"><div class="rbullet">!</div><div class="rtxt"><strong>Healthcare Fraud — 18 U.S.C. §1347:</strong> Payment for services not rendered constitutes federal healthcare fraud — criminal penalties up to 10 years imprisonment and civil liability of $50,000+ per false transaction.</div></div>
-      <div class="ritem"><div class="rbullet">!</div><div class="rtxt"><strong>Wire Fraud — 18 U.S.C. §1343:</strong> Electronic submission of fabricated invoices across interstate systems; each wire transmission carries a separate 20-year count under enterprise fraud statutes.</div></div>
-      <div class="ritem"><div class="rbullet">!</div><div class="rtxt"><strong>SOX Internal Controls Material Weakness:</strong> 18 SOD overrides by 3 approvers constitute an auditable failure under SOX §302/404 — requires CEO/CFO re-certification and potential SEC disclosure.</div></div>
-      <div class="ritem"><div class="rbullet">!</div><div class="rtxt"><strong>FCPA Third-Party Vendor Risk:</strong> Two newly-registered vendors receiving $549,000 with no beneficial ownership disclosure — FCPA exposure if principals are foreign nationals or government-affiliated persons.</div></div>
-      <div class="ritem"><div class="rbullet">!</div><div class="rtxt"><strong>Ghost Attendee Identity Misuse:</strong> Falsely naming 36 HCPs in invoices without consent constitutes identity misuse — triggers HIPAA-adjacent privacy obligations and professional-license complaint duties.</div></div>
+      <div class="rbox-hd"><div class="rbox-icon">&#9888;</div><div class="rbox-ttl">Agent Identified Risks</div></div>
+      <div class="ritem"><div class="rbullet">!</div><div class="rtxt"><strong>Services invoiced for meetings that did not happen.</strong> Agent cross-referenced systems to identify anomalies and flagged suspicious payments.</div></div>
+      <div class="ritem"><div class="rbullet">!</div><div class="rtxt"><strong>Agent flagged other vendor payments</strong> by the same approver (Jake Miller) for review.</div></div>
+      <div class="ritem"><div class="rbullet">!</div><div class="rtxt"><strong>Foreign Corrupt Practices Act (FCPA) and EFPIA Code violation risk detected.</strong> Estimated fine exposure (industry precedent): <strong>$500M – $700M</strong></div></div>
     </div>
+
+    <!-- Agent Performed Actions -->
     <div class="abox">
-      <div class="abox-hd"><div class="abox-icon">&#10003;</div><div class="abox-ttl">Autonomous Agent Interventions — Executed</div></div>
-      <div class="aitem"><div class="achk">&#10003;</div><div class="atxt"><strong>All payments to the two flagged advisory vendors automatically frozen</strong> in SAP; vendor master records locked with fraud-investigation hold code; AP workflow re-routed to compliance-only approval queue.</div></div>
-      <div class="aitem"><div class="achk">&#10003;</div><div class="atxt"><strong>Formal vendor fraud investigation automatically opened</strong> in GRC case management with pre-populated forensic evidence package: invoice anomaly reports, cross-system gaps, and venue validation failures indexed.</div></div>
-      <div class="aitem"><div class="achk">&#10003;</div><div class="atxt"><strong>Approver access rights automatically suspended</strong> for M. Thornton and K. Brandt; all future transactions from previously approved vendors auto-escalated to VP Finance and Legal for dual countersignature.</div></div>
-      <div class="aitem"><div class="achk">&#10003;</div><div class="atxt"><strong>Beneficial ownership investigation automatically initiated</strong> via integrated KYC/AML engine; UBO registry lookups submitted across 47 jurisdictions with results queued for compliance analyst review.</div></div>
-      <div class="aitem"><div class="achk">&#10003;</div><div class="atxt"><strong>Ghost HCP notification protocol automatically triggered:</strong> 36 improperly-named HCPs flagged for identity verification; CRM and Sunshine Act records corrected to remove fraudulent meeting attributions.</div></div>
-      <div class="aitem"><div class="achk">&#10003;</div><div class="atxt"><strong>Meeting integrity validation rule automatically deployed:</strong> mandatory CRM confirmation, venue booking receipt, and GDS-verified travel record now required before any advisory payment can proceed to SAP approval.</div></div>
+      <div class="abox-hd"><div class="abox-icon">&#10003;</div><div class="abox-ttl">Agent Performed Actions</div></div>
+      <div class="aitem"><div class="achk">&#10003;</div><div class="atxt"><strong>Upcoming payments autonomously placed on hold</strong> for all 3 suspicious cases.</div></div>
+      <div class="aitem"><div class="achk">&#10003;</div><div class="atxt"><strong>Individual compliance cases created</strong> for all 3 cases, including the evidence dossier for each suspicious case.</div></div>
+      <div class="aitem"><div class="achk">&#10003;</div><div class="atxt"><strong>Employee compliance case reported</strong> for Invoice Approver Jake Miller.</div></div>
     </div>
   </div>
 
@@ -689,143 +313,88 @@ body{
 <div class="screen-block">
 
   <div class="scr-head">
-    <div class="scr-title-col">
-      <div class="scr-tag">&#9679; Investigation Case &nbsp;IC-2024-0689</div>
-      <div class="scr-title">Cross-Border Threshold Gaming &amp; Beneficial Ownership Concealment</div>
-      <div class="scr-sub">Affiliate payment structuring &nbsp;&middot;&nbsp; Sunshine Act &amp; EFPIA global aggregation &nbsp;&middot;&nbsp; Ultimate beneficial owner identification &nbsp;&middot;&nbsp; Multi-country disclosure compliance</div>
+    <div>
+      <div class="scr-tag">&#9679; Screen 3</div>
+      <div class="scr-title">Cross-Border Threshold Gaming &amp; Entity Obfuscation</div>
+      <div class="scr-sub">Fragmented Affiliate Ledger · Corporate Intelligence — Ultimate Beneficiary Owner · Prof. James Hartford (KOL)</div>
     </div>
     <div class="scr-badges">
-      <span class="badge b-risk"><span class="bdot"></span>TRANSPARENCY VIOLATIONS DETECTED</span>
+      <span class="badge b-risk"><span class="bdot"></span>SUNSHINE ACT / EFPIA RISK</span>
       <span class="badge b-act"><span class="bdot"></span>AI AGENT ACTIVE</span>
-      <span class="badge b-blue">9 COUNTRIES IMPLICATED</span>
     </div>
   </div>
 
-  <div class="summary-strip">
-    <div class="sum-item"><div class="sum-val" style="color:#fca5a5;">$4.31M</div><div class="sum-lbl">Global Structured Spend</div></div>
-    <div class="sum-sep"></div>
-    <div class="sum-item"><div class="sum-val" style="color:#fde68a;">14</div><div class="sum-lbl">Affiliate Entities Used</div></div>
-    <div class="sum-sep"></div>
-    <div class="sum-item"><div class="sum-val" style="color:#fca5a5;">$2.70M</div><div class="sum-lbl">Unreported to Authorities</div></div>
-    <div class="sum-sep"></div>
-    <div class="sum-item"><div class="sum-val" style="color:#fde68a;">73%</div><div class="sum-lbl">Payments Below $10K Threshold</div></div>
-    <div class="sum-sep"></div>
-    <div class="sum-item"><div class="sum-val" style="color:#86efac;">6</div><div class="sum-lbl">Autonomous Actions Taken</div></div>
+  <!-- Estimated Exposure -->
+  <div class="exposure">
+    <div class="exp-icon">&#9888;</div>
+    <div>
+      <div class="exp-lbl">Estimated Fine Exposure (Industry Precedent)</div>
+      <div class="exp-val">$250M &ndash; $500M &nbsp;&nbsp;|&nbsp;&nbsp; Sunshine Act and EFPIA Code violation risk detected</div>
+    </div>
   </div>
 
-  <div class="kpi-row">
-    <div class="kpi red"><div class="kpi-v vr">$4.31M</div><div class="kpi-l">Aggregated Cross-Entity Global Spend (Structured)</div><div class="kpi-c cu">Reported to Authorities: $0</div></div>
-    <div class="kpi red"><div class="kpi-v vr">14</div><div class="kpi-l">Affiliate Entities Used for Payment Fragmentation</div><div class="kpi-c cu">Across 9 Countries</div></div>
-    <div class="kpi red"><div class="kpi-v vr">$9,800</div><div class="kpi-l">Median Individual Payment (Threshold: $10K)</div><div class="kpi-c cw">98% of Threshold — Deliberate</div></div>
-    <div class="kpi amber"><div class="kpi-v va">3</div><div class="kpi-l">Beneficial Owners Across 14 Entities</div><div class="kpi-c cw">Shell-Entity Layering Confirmed</div></div>
-  </div>
-
-  <div class="sec-lbl">&#128203; Investigation Evidence</div>
   <div class="g2">
+    <!-- Fragmented Affiliate Ledger -->
     <div class="card">
-      <div class="card-lbl"><span class="cdot r"></span>Global HCP Spend Aggregation — Entity Fragmentation Map</div>
+      <div class="card-lbl"><span class="cdot r"></span>Fragmented Affiliate Ledger — Payments in 2024</div>
       <table class="etbl">
-        <thead><tr><th>HCP / Recipient</th><th>Entities</th><th>Countries</th><th>Total Aggregated</th><th>Disclosed</th></tr></thead>
+        <thead><tr><th>Country</th><th>Payee Organization</th><th>Payment</th><th>Local Limit</th><th>% of Limit</th></tr></thead>
         <tbody>
-          <tr><td><strong>Prof. H. Lindqvist</strong><br><span style="font-size:10.5px;color:#9ca3af">KOL – Neurology (SE/DE/US)</span></td><td class="cr">5 entities</td><td>SE, DE, US, NL</td><td class="cr">$687,400</td><td><span class="pill pr">$0</span></td></tr>
-          <tr><td><strong>Dr. F. Maalouf</strong><br><span style="font-size:10.5px;color:#9ca3af">KOL – Oncology (FR/CH/UK)</span></td><td class="cr">4 entities</td><td>FR, CH, UK</td><td class="cr">$541,200</td><td><span class="pill pam">&#8364;42K</span></td></tr>
-          <tr><td><strong>Dr. Y. Obi</strong><br><span style="font-size:10.5px;color:#9ca3af">KOL – Cardiology (NG/UK/US)</span></td><td class="cr">3 entities</td><td>NG, UK, US</td><td class="cr">$378,900</td><td><span class="pill pr">$0</span></td></tr>
-          <tr><td><strong>Prof. G. Tanaka</strong><br><span style="font-size:10.5px;color:#9ca3af">KOL – Genomics (JP/SG/US)</span></td><td class="cam">3 entities</td><td>JP, SG, US</td><td class="cam">$312,700</td><td><span class="pill pam">&#165;2.1M</span></td></tr>
+          <tr><td>US</td><td>Apex Clinical Advisors LLC</td><td class="cbl">$22,000</td><td>$25,000</td><td class="cr">88%</td></tr>
+          <tr><td>UK</td><td>Apex MedComms Ltd</td><td class="cbl">£18,000</td><td>£20,000</td><td class="cr">90%</td></tr>
+          <tr><td>Germany</td><td>Apex Forschung GmbH</td><td class="cbl">€20,000</td><td>€22,500</td><td class="cr">89%</td></tr>
+          <tr><td>France</td><td>Apex Scientifique SAS</td><td class="cbl">€19,500</td><td>€22,000</td><td class="cr">89%</td></tr>
+          <tr><td>Italy</td><td>Apex Ricerca Srl</td><td class="cbl">€17,000</td><td>€19,000</td><td class="cr">89%</td></tr>
+          <tr><td>Japan</td><td>Apex Bio-Strategy KK</td><td class="cbl">¥2.8M</td><td>¥3.2M</td><td class="cr">87%</td></tr>
         </tbody>
       </table>
     </div>
-    <div style="display:flex;flex-direction:column;gap:14px;">
-      <div class="card">
-        <div class="card-lbl"><span class="cdot r"></span>Payment Structuring Distribution — Threshold Avoidance Pattern</div>
-        <div style="margin-bottom:7px;font-size:11px;color:#6b7280;">Individual transaction values vs. $10,000 Sunshine Act / EFPIA disclosure thresholds:</div>
-        <div class="spark" style="height:64px;">
-          <div class="sc" style="height:15%;background:#d1d5db;"></div>
-          <div class="sc" style="height:20%;background:#d1d5db;"></div>
-          <div class="sc" style="height:18%;background:#fbbf24;"></div>
-          <div class="sc" style="height:26%;background:#fbbf24;"></div>
-          <div class="sc" style="height:96%;background:linear-gradient(180deg,#DC2626,#ef4444);"></div>
-          <div class="sc" style="height:8%;background:#2563eb;"></div>
-          <div class="sc" style="height:6%;background:#2563eb;"></div>
-          <div class="sc" style="height:5%;background:#2563eb;"></div>
-        </div>
-        <div style="display:flex;justify-content:space-between;font-size:10px;color:#9ca3af;margin-top:4px;"><span>$3K</span><span style="color:#DC2626;font-weight:800;">&#9888; $9–$9.99K PEAK</span><span>$15K+</span></div>
-        <div class="alert-strip alert-r" style="margin-top:9px;"><strong>Structuring confirmed:</strong> 73% of transactions cluster within $9,000–$9,999 — a statistically impossible distribution (p &lt; 0.001) absent deliberate threshold management.</div>
-      </div>
-      <div class="card">
-        <div class="card-lbl"><span class="cdot r"></span>Beneficial Ownership — Three-Layer Shell Structure</div>
-        <div class="tline" style="margin-top:4px;">
-          <div class="titem"><div class="tdot tr"></div><div class="tdate">Layer 1 — Invoicing Entities</div><div class="ttxt">14 affiliates (4 LLCs, 6 LTDs, 4 GmbHs) across SE, NL, CH, UK, SG. All registered &lt;18 months ago.</div></div>
-          <div class="titem"><div class="tdot tr"></div><div class="tdate">Layer 2 — Intermediate Holding Vehicles</div><div class="ttxt">5 holding companies in Luxembourg &amp; Cayman Islands with nominee directors — no employees or physical offices.</div></div>
-          <div class="titem"><div class="tdot tr"></div><div class="tdate">Layer 3 — Ultimate Beneficial Owners (UBOs)</div><div class="ttxt"><strong style="color:#DC2626;">3 individuals identified:</strong> two are spouses of KOLs receiving payments; one is a former regulatory official with pharma oversight history.</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="g3">
+    <!-- UBO Intelligence -->
     <div class="card">
-      <div class="card-lbl"><span class="cdot r"></span>Sunshine Act Disclosure Gap — Aggregated vs. Reported</div>
+      <div class="card-lbl"><span class="cdot r"></span>Corporate Intelligence — Ultimate Beneficiary Owner</div>
       <table class="etbl">
-        <thead><tr><th>Category</th><th>Aggregated</th><th>Open Payments</th><th>Gap</th></tr></thead>
+        <thead><tr><th>Country</th><th>Payee Organization</th><th>Parent Holding Company</th></tr></thead>
         <tbody>
-          <tr><td>Consulting Fees</td><td>$1,240,000</td><td class="cr">$87,000</td><td class="cr">$1,153,000</td></tr>
-          <tr><td>Research Payments</td><td>$986,000</td><td class="cr">$112,000</td><td class="cr">$874,000</td></tr>
-          <tr><td>Educational Grants</td><td>$743,000</td><td class="cam">$391,000</td><td class="cam">$352,000</td></tr>
-          <tr><td>Travel &amp; Lodging</td><td>$340,000</td><td class="cr">$18,000</td><td class="cr">$322,000</td></tr>
+          <tr><td>US</td><td>Apex Clinical Advisors LLC</td><td class="cam">Apex Global Medical Holding Corp</td></tr>
+          <tr><td>UK</td><td>Apex MedComms Ltd</td><td class="cam">Apex Global Medical Holding Corp</td></tr>
+          <tr><td>Germany</td><td>Apex Forschung GmbH</td><td class="cam">Apex Global Medical Holding Corp</td></tr>
+          <tr><td>France</td><td>Apex Scientifique SAS</td><td class="cam">Apex Global Medical Holding Corp</td></tr>
+          <tr><td>Italy</td><td>Apex Ricerca Srl</td><td class="cam">Apex Global Medical Holding Corp</td></tr>
+          <tr><td>Japan</td><td>Apex Bio-Strategy KK</td><td class="cam">Apex Global Medical Holding Corp</td></tr>
         </tbody>
       </table>
-      <div class="srow" style="margin-top:8px;"><div class="schip" style="background:#fef2f2;border-color:#fecaca;color:#DC2626;">Total Unreported: <span>$2.70M</span></div></div>
-    </div>
-    <div class="card">
-      <div class="card-lbl"><span class="cdot r"></span>EFPIA Code Disclosure Compliance by Country</div>
-      <div class="bchart" style="margin-top:4px;">
-        <div class="brow"><div class="bname">Germany (DE)</div><div class="btrack"><div class="bfill" style="width:22%;background:#DC2626;"></div></div><div class="bval cr">22%</div></div>
-        <div class="brow"><div class="bname">France (FR)</div><div class="btrack"><div class="bfill" style="width:31%;background:#f97316;"></div></div><div class="bval cam">31%</div></div>
-        <div class="brow"><div class="bname">Switzerland (CH)</div><div class="btrack"><div class="bfill" style="width:18%;background:#DC2626;"></div></div><div class="bval cr">18%</div></div>
-        <div class="brow"><div class="bname">United Kingdom</div><div class="btrack"><div class="bfill" style="width:44%;background:#f97316;"></div></div><div class="bval cam">44%</div></div>
-        <div class="brow"><div class="bname">Sweden (SE)</div><div class="btrack"><div class="bfill" style="width:19%;background:#DC2626;"></div></div><div class="bval cr">19%</div></div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-lbl"><span class="cdot r"></span>Affiliate Payment Network — Entity Concentration</div>
-      <div class="bchart" style="margin-top:4px;">
-        <div class="brow"><div class="bname">NeuroCon SE (SE)</div><div class="btrack"><div class="bfill" style="width:92%;background:linear-gradient(90deg,#DC2626,#ef4444);"></div></div><div class="bval cr">$687K</div></div>
-        <div class="brow"><div class="bname">MediAdvise SA (CH)</div><div class="btrack"><div class="bfill" style="width:72%;background:#DC2626;"></div></div><div class="bval cr">$541K</div></div>
-        <div class="brow"><div class="bname">BioLink Ltd (UK)</div><div class="btrack"><div class="bfill" style="width:51%;background:#f97316;"></div></div><div class="bval cam">$379K</div></div>
-        <div class="brow"><div class="bname">GenAdvise Pte (SG)</div><div class="btrack"><div class="bfill" style="width:42%;background:#f97316;"></div></div><div class="bval cam">$313K</div></div>
-        <div class="brow"><div class="bname">10 Other Affiliates</div><div class="btrack"><div class="bfill" style="width:58%;background:#fbbf24;"></div></div><div class="bval cam">$2.39M</div></div>
-      </div>
     </div>
   </div>
 
-  <div class="sec-lbl">&#129302; AI Agent Findings</div>
+  <!-- Peer Comparison -->
   <div class="card gfull">
-    <div class="find-grid">
-      <div class="find-item"><div class="fnum">1</div><div class="ftxt"><strong>73% of cross-border transactions cluster within $9,000–$9,999</strong> (p &lt; 0.001) — a statistically impossible distribution absent deliberate structuring to remain below Sunshine Act and EFPIA mandatory disclosure thresholds.</div></div>
-      <div class="find-item"><div class="fnum">2</div><div class="ftxt"><strong>$4.31M distributed across 14 entities in 9 countries</strong> with $2.70M entirely absent from Open Payments and EFPIA portals. The identical fragmentation pattern across 4 KOLs indicates coordinated concealment, not administrative error.</div></div>
-      <div class="find-item"><div class="fnum">3</div><div class="ftxt"><strong>UBO trace reveals 2 of 3 beneficial owners are spouses of KOLs</strong> receiving payments — a direct financial nexus that transforms HCP transfers into personal compensation under FCPA, AKS, and Bribery Act interpretations, regardless of contracting structure.</div></div>
-      <div class="find-item"><div class="fnum">4</div><div class="ftxt"><strong>EFPIA disclosure compliance across 5 EU markets: 18%–44%.</strong> All 5 markets use the same entity-fragmentation pattern — confirming a systematic multi-country non-disclosure strategy rather than per-country administrative failure.</div></div>
-      <div class="find-item"><div class="fnum">5</div><div class="ftxt"><strong>One UBO is a former regulatory official with pharma oversight history,</strong> elevating this case to a potential FCPA improper government advantage scenario (15 U.S.C. §78dd-1) and UK Bribery Act Section 6 — independent of AKS or transparency regulation analysis.</div></div>
-    </div>
+    <div class="card-lbl"><span class="cdot"></span>Peer Comparison — Same Services | Same Regions | Same Period</div>
+    <table class="etbl">
+      <thead><tr><th>Metric</th><th>Apex Organizations</th><th>Peer Organizations</th></tr></thead>
+      <tbody>
+        <tr><td>Average Payments vs Local Thresholds</td><td class="cr">+89%</td><td class="cg2">+42%</td></tr>
+        <tr><td>Sole Shareholder for Apex Global</td><td colspan="2" class="cam">Prof. James Hartford (KOL)</td></tr>
+        <tr><td>Other cases exhibiting similar pattern</td><td colspan="2" class="cr">3 more cases</td></tr>
+      </tbody>
+    </table>
   </div>
 
   <div class="g2">
+    <!-- Agent Identified Risks -->
     <div class="rbox">
-      <div class="rbox-hd"><div class="rbox-icon">&#9888;</div><div class="rbox-ttl">Agent Identified Risks — Transparency, Sunshine Act &amp; EFPIA</div></div>
-      <div class="ritem"><div class="rbullet">!</div><div class="rtxt"><strong>Sunshine Act Willful Non-Disclosure:</strong> $2.70M in unreported transfers — CMS civil penalties of $1,000–$10,000 per record (up to $1.15M/year) with DOJ referral risk for systemic non-compliance under 42 U.S.C. §1320a-7h.</div></div>
-      <div class="ritem"><div class="rbullet">!</div><div class="rtxt"><strong>EFPIA Multi-Country Transparency Violations:</strong> 18%–44% compliance across 5 EU markets violates EFPIA Code Articles 24–27 — national federation sanctions, corrective disclosure mandates, and industry blacklisting risk.</div></div>
-      <div class="ritem"><div class="rbullet">!</div><div class="rtxt"><strong>FCPA &amp; UK Bribery Act — Former Official Exposure:</strong> Beneficial ownership by a former regulatory official creates a presumptive corrupt payment scenario — criminal fines with no cap and potential DOJ/SFO prosecution.</div></div>
-      <div class="ritem"><div class="rbullet">!</div><div class="rtxt"><strong>Structuring / AML Exposure — 31 U.S.C. §5324:</strong> Deliberate sub-$10,000 fragmentation mirrors structuring behavior prohibited under BSA regardless of the underlying payment's legality — SAR obligations may apply.</div></div>
-      <div class="ritem"><div class="rbullet">!</div><div class="rtxt"><strong>KOL Spouse Ownership — Sham Transaction Designation:</strong> Payments to entities beneficially owned by KOL spouses risk reclassification as direct remuneration — eliminating any business purpose defense and converting all related transactions into per se AKS violations.</div></div>
+      <div class="rbox-hd"><div class="rbox-icon">&#9888;</div><div class="rbox-ttl">Agent Identified Risks</div></div>
+      <div class="ritem"><div class="rbullet">!</div><div class="rtxt"><strong>Prof. James Hartford (KOL) established a holding company</strong> with 6 localised operating subsidiaries to receive payments under the radar individually.</div></div>
+      <div class="ritem"><div class="rbullet">!</div><div class="rtxt"><strong>Agent resolved the Ultimate Beneficiary Owner to the KOL</strong> and flagged multi-million-dollar non-disclosure exposure based on aggregated global spend.</div></div>
+      <div class="ritem"><div class="rbullet">!</div><div class="rtxt"><strong>Agent detected threshold proximity pattern (87–90% of local limit).</strong></div></div>
+      <div class="ritem"><div class="rbullet">!</div><div class="rtxt"><strong>Sunshine Act and EFPIA Code violation risk detected.</strong> Estimated fine exposure (industry precedent): <strong>$250M – $500M</strong></div></div>
     </div>
+
+    <!-- Agent Performed Actions -->
     <div class="abox">
-      <div class="abox-hd"><div class="abox-icon">&#10003;</div><div class="abox-ttl">Autonomous Agent Interventions — Executed</div></div>
-      <div class="aitem"><div class="achk">&#10003;</div><div class="atxt"><strong>Global cross-entity spend aggregation automatically computed</strong> across all 14 affiliates and 9 countries; unified HCP spend ledger generated and reconciled against Sunshine Act and EFPIA thresholds for immediate disclosure gap quantification.</div></div>
-      <div class="aitem"><div class="achk">&#10003;</div><div class="atxt"><strong>Beneficial ownership investigation automatically escalated</strong> to multi-jurisdictional UBO resolution workflow; KYC engine submitted lookups across Luxembourg, Cayman, SE, NL, and CH; former-official identity flag raised for FCPA counsel review.</div></div>
-      <div class="aitem"><div class="achk">&#10003;</div><div class="atxt"><strong>All pending payments to 14 affiliated entities automatically placed on regulatory hold;</strong> multi-country compliance officer alerts issued to DE, FR, UK, CH, and SE leads with full transaction dossiers attached.</div></div>
-      <div class="aitem"><div class="achk">&#10003;</div><div class="atxt"><strong>EFPIA voluntary corrective disclosure package automatically drafted</strong> for all 5 European markets; country-specific templates pre-populated with aggregated spend data and submitted to National Transparency Portal queues pending legal certification.</div></div>
-      <div class="aitem"><div class="achk">&#10003;</div><div class="atxt"><strong>Sunshine Act retroactive reconciliation filing automatically prepared:</strong> $2.70M discrepancy quantified, record-level amendment file generated in CMS Open Payments XML format, voluntary correction workflow initiated via Program Support Center portal.</div></div>
-      <div class="aitem"><div class="achk">&#10003;</div><div class="atxt"><strong>Anti-structuring detection rule automatically deployed globally:</strong> real-time cross-entity aggregation engine activated — any sub-threshold clustering pattern now triggers automatic aggregation check before any HCP payment can proceed.</div></div>
+      <div class="abox-hd"><div class="abox-icon">&#10003;</div><div class="abox-ttl">Agent Performed Actions</div></div>
+      <div class="aitem"><div class="achk">&#10003;</div><div class="atxt"><strong>Upcoming payments autonomously placed on hold</strong> for all 4 suspicious cases.</div></div>
+      <div class="aitem"><div class="achk">&#10003;</div><div class="atxt"><strong>Individual compliance cases created</strong> for all 4 cases, including the evidence dossier for each suspicious case.</div></div>
     </div>
   </div>
 
@@ -835,7 +404,6 @@ body{
 <div class="footer">
   <strong>Pharma PayGuard AI</strong> &nbsp;&middot;&nbsp; Autonomous Compliance Intelligence &nbsp;&middot;&nbsp; SAP Analytics Cloud Story
   &nbsp;&middot;&nbsp; <strong>Confidential</strong> — For Compliance Officers, Legal, CRO &amp; Regulatory Auditors Only
-
 </div>
 
 </body>
